@@ -1,0 +1,159 @@
+:root {
+	--wz-ink: #2d2823;
+	--wz-paper: #f4edde;
+	--wz-paper-dark: #e7dbc6;
+	--wz-red: #aa3d2d;
+	--wz-red-dark: #7a261b;
+	--wz-green: #2f6a55;
+	--wz-shadow: rgba(18, 11, 8, 0.45);
+	--wz-title-font: JiangChengYuanTi, LXGW, KaiTi, serif;
+	--wz-body-font: JiangChengYuanTi, WebgalUI, LXGW, serif;
+}
+
+/* Title page */
+[class*="_Title_backup_background_"] {
+	background:
+		radial-gradient(circle at 14% 18%, rgba(255, 244, 216, 0.9) 0, rgba(255, 244, 216, 0.35) 20%, transparent 44%),
+		radial-gradient(circle at 82% 76%, rgba(180, 75, 53, 0.28) 0, rgba(180, 75, 53, 0.1) 26%, transparent 46%),
+		linear-gradient(120deg, #e7dbc6 0%, #f5efe1 38%, #dfd2bb 100%);
+}
+
+[class*="_Title_buttonList_"] {
+	padding-left: 10rem;
+	gap: 2.2rem;
+}
+
+[class*="_Title_button_"] {
+	background: linear-gradient(135deg, var(--wz-red) 0%, var(--wz-red-dark) 100%);
+	border: 2px solid rgba(255, 249, 240, 0.9);
+	box-shadow: 0 10px 24px rgba(70, 26, 19, 0.3);
+	padding: 0.85em 1.8em 0.85em 2.2em;
+}
+
+[class*="_Title_button_text_"] {
+	font-family: var(--wz-title-font);
+	letter-spacing: 0.12em;
+}
+
+[class*="_Title_version_info_"] {
+	color: var(--wz-ink);
+	opacity: 0.55;
+	text-shadow: none;
+}
+
+/* Text box */
+[class*="_TextBox_main_"] {
+	font-family: var(--wz-body-font);
+	font-weight: 600;
+	letter-spacing: 0.07em;
+	border-radius: 22px;
+	left: 110px;
+	right: 110px;
+	bottom: 36px;
+	min-height: 300px;
+	max-height: 300px;
+	padding: 1.2em 2em 1.4em 2em;
+}
+
+[class*="_TextBox_Background_"] {
+	background:
+		linear-gradient(0deg, rgba(232, 220, 199, 0.9), rgba(248, 241, 229, 0.94)),
+		repeating-linear-gradient(45deg, rgba(145, 118, 86, 0.06) 0 2px, rgba(255, 255, 255, 0) 2px 6px);
+	border: 2px solid rgba(88, 66, 41, 0.3);
+	box-shadow: 0 12px 40px var(--wz-shadow);
+}
+
+[class*="_TextBox_showName_"] {
+	font-family: var(--wz-title-font);
+	left: 26px;
+	top: -58px;
+	border-radius: 999px;
+	padding: 0 1.8em;
+	min-width: 9.5em;
+	height: 68px;
+}
+
+[class*="_TextBox_ShowName_Background_"] {
+	background: linear-gradient(140deg, var(--wz-green), #235140);
+	border: 3px solid rgba(255, 250, 240, 0.8);
+	box-shadow: 0 8px 22px rgba(25, 54, 44, 0.35);
+}
+
+[class*="_TextBox_main_"] [class*="_outer_"] {
+	color: var(--wz-ink);
+	background: none;
+	-webkit-text-fill-color: var(--wz-ink);
+}
+
+[class*="_TextBox_main_"] [class*="_inner_"] {
+	-webkit-text-stroke: 1px rgba(255, 250, 242, 0.8);
+}
+
+/* Choose panel */
+[class*="_Choose_Main_"] {
+	background:
+		radial-gradient(circle at 50% 65%, rgba(24, 14, 10, 0.28), rgba(24, 14, 10, 0.45));
+}
+
+[class*="_Choose_item_outer_"] {
+	min-width: 64%;
+	border-radius: 18px;
+	background: linear-gradient(125deg, rgba(119, 38, 28, 0.95), rgba(71, 21, 15, 0.95));
+	box-shadow: 0 14px 26px rgba(0, 0, 0, 0.34);
+}
+
+[class*="_Choose_item_"] {
+	min-width: 100%;
+	border-radius: 14px;
+	font-family: var(--wz-body-font);
+	color: #3d3028;
+	background: linear-gradient(145deg, rgba(252, 245, 233, 0.97), rgba(236, 226, 208, 0.96));
+	border: 1px solid rgba(130, 94, 67, 0.42);
+	box-shadow: 0 8px 18px rgba(26, 13, 8, 0.22);
+}
+
+[class*="_Choose_item_"]:hover {
+	color: #2d221a;
+	border-color: rgba(122, 38, 27, 0.65);
+	box-shadow: 0 10px 22px rgba(26, 13, 8, 0.3);
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+	[class*="_Title_buttonList_"] {
+		padding-left: 2.2rem;
+		gap: 1.2rem;
+	}
+
+	[class*="_Title_button_"] {
+		margin-top: 1.1rem;
+		transform: scale(0.85);
+		transform-origin: left center;
+	}
+
+	[class*="_TextBox_main_"] {
+		left: 20px;
+		right: 20px;
+		bottom: 20px;
+		min-height: 250px;
+		max-height: 250px;
+		padding: 0.9em 1.2em 1em 1.2em;
+	}
+
+	[class*="_TextBox_showName_"] {
+		top: -48px;
+		height: 54px;
+		line-height: 54px;
+		min-width: 8.4em;
+		padding: 0 1.3em;
+	}
+
+	[class*="_Choose_item_outer_"] {
+		min-width: 90%;
+	}
+
+	[class*="_Choose_item_"] {
+		font-size: 150%;
+		height: 84px;
+	}
+}
