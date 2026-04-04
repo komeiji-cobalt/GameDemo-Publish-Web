@@ -310,9 +310,17 @@
         // Live2D SDK の読み込みを試みます。
         // ユーザーが Live2D ライセンスを取得し、以下のディレクトリに配置した場合のみ、読み込みが成功します。
         // このプロジェクトには Live2D SDK は**含まれていません**
-        const live2d2Promise = loadIifePlugin('lib/live2d.min.js');
-        const live2d4Promise = loadIifePlugin('lib/live2dcubismcore.min.js');
-        window.live2dPromise = Promise.all([live2d2Promise, live2d4Promise]);
+        // 默认不主动请求 Live2D 资源，避免在未放置 SDK 时产生 404/5xx 噪音。
+        // 需要启用时可在页面上提前设置: window.WEBGAL_ENABLE_LIVE2D = true
+        const shouldLoadLive2d = window.WEBGAL_ENABLE_LIVE2D === true;
+        if (shouldLoadLive2d) {
+          const live2d2Promise = loadIifePlugin('lib/live2d.min.js');
+          const live2d4Promise = loadIifePlugin('lib/live2dcubismcore.min.js');
+          window.live2dPromise = Promise.all([live2d2Promise, live2d4Promise]);
+        } else {
+          window.live2dPromise = Promise.resolve([false, false]);
+          console.info('[INFO] Live2D SDK loading skipped (disabled by default).');
+        }
       })();
     </script>
     <!-- main文件 -->
