@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1536" viewBox="0 0 1024 1536">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2f3f52"/>
+      <stop offset="100%" stop-color="#1b2531"/>
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="1536" fill="url(#bg)"/>
+  <ellipse cx="512" cy="1450" rx="260" ry="48" fill="#000" opacity="0.28"/>
+  <path d="M312 1210 Q512 1080 712 1210 L742 1536 L282 1536 Z" fill="#d7e2ee"/>
+  <ellipse cx="512" cy="892" rx="178" ry="224" fill="#f2c39f"/>
+  <path d="M344 862 Q366 656 512 618 Q658 656 680 862 Q612 778 512 778 Q412 778 344 862 Z" fill="#1a212b"/>
+  <circle cx="444" cy="886" r="16" fill="#252c36"/>
+  <circle cx="580" cy="886" r="16" fill="#252c36"/>
+  <path d="M426 964 Q512 1040 598 964" stroke="#9a6548" stroke-width="14" fill="none" stroke-linecap="round"/>
+  <rect x="334" y="1184" width="356" height="126" rx="16" fill="#edf3fa" opacity="0.95"/>
+  <text x="512" y="1262" text-anchor="middle" fill="#253849" font-size="44" font-family="KaiTi, serif">陈小明</text>
+  <text x="512" y="1322" text-anchor="middle" fill="#4e667d" font-size="28" font-family="KaiTi, serif">守法共赢，笑着下班</text>
+</svg>

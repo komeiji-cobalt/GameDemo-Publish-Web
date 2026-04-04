@@ -1,7 +1,7 @@
-﻿changeBg:workshop.svg;
+changeBg:workshop.svg;
 bgm:s_Title.mp3 -volume=42;
-
-旁白:破旧皮革作坊办公室里，墙上挂满了“奋斗”“家族企业”的金边锦旗。;
+changeFigure:chen_xiaoming.svg;
+;
 旁白:一道白光掠过，穿越的呼啸声和微信到账提示音缠在一起。;
 陈小明:我重生了。;
 陈小明:上一世我给黄老板打工三年。;
@@ -12,6 +12,7 @@ bgm:s_Title.mp3 -volume=42;
 陈小明:今天是2026年4月2日。;
 陈小明:距离他跑路还有两个月，还来得及。;
 
+changeFigure:huang_boss.svg;
 黄老板:小明啊，隔壁厂都在搞996福报，我们温州人不能输。;
 黄老板:今晚这批皮带不打完，明天西班牙客户要生气的呀。;
 陈小明:黄总，根据劳动法第四十一条，您这个属于延长工作时间。;
@@ -19,6 +20,7 @@ bgm:s_Title.mp3 -volume=42;
 黄老板:晚上请你吃灯盏糕，就当加班费了好不啦。;
 
 旁白:第一回合，加班费之战。;
+playEffect:alert.wav;
 wait:300;
 
 陈小明:黄总，我过去一年加班872小时，证据都在这里。;
@@ -30,17 +32,22 @@ wait:300;
 choose:直接摆法条硬刚:ot_hard|先开录音再摊牌:ot_smart;
 
 label:ot_hard;
+changeFigure:chen_xiaoming.svg;
 陈小明:黄总，感情不等于白干，法条在这，签字确认吧。;
+changeFigure:huang_boss.svg;
 黄老板:你眼神怎么突然这么可怕。;
 jumpLabel:ot_core;
 
 label:ot_smart;
 旁白:陈小明悄悄把手机录音打开，连语气都放慢了半拍。;
+changeFigure:chen_xiaoming.svg;
 陈小明:黄总，您刚刚说“灯盏糕抵加班费”，我录下来了，咱们讲证据。;
+changeFigure:huang_boss.svg;
 黄老板:你怎么还带技术流。;
 jumpLabel:ot_core;
 
 label:ot_core;
+changeFigure:chen_xiaoming_serious.svg;
 陈小明:您当年是创业，我现在是就业，身份不同，规则也不同。;
 陈小明:阿黄叔，温州人最讲实际对伐。;
 陈小明:劳动法就是国家和我们的感情。;
@@ -49,41 +56,69 @@ label:ot_core;
 
 wait:450;
 changeBg:insurance.svg;
+playEffect:live.wav;
 
 旁白:第二回合，社保攻坚战。;
+changeFigure:huang_boss.svg;
 黄老板:我给你发现金不香吗，社保你自己交，我还多给你两百。;
+changeFigure:chen_xiaoming.svg;
 陈小明:家人们谁懂啊，遇到不交社保的老板怎么办。;
 陈小明:记住第一点，社会保险法第五十八条，用人单位必须三十日内办理社保。;
 陈小明:记住第二点，温州12333热线，打这个比求菩萨保佑有用。;
+changeFigure:huang_boss.svg;
 黄老板:别拍了别拍了，我们温州人……;
+changeFigure:chen_xiaoming.svg;
 陈小明:对，温州人现在带头守法。;
 陈小明:直播间三万人看着呢，黄总，要不您给大家唱段瓯剧，我就关直播。;
 旁白:礼物特效刷屏。;
 旁白:【温州老板送出一首 向法律低头】;
 
-choose:开直播当场普法:ss_live|先私下沟通给整改机会:ss_private;
+choose:开直播当场普法:ss_live|先私下沟通给整改机会:ss_private|先找同事联名取证:ss_union;
 
 label:ss_private;
+changeFigure:chen_xiaoming.svg;
 陈小明:我先给您二十四小时整改窗口，补社保，补台账，补合同。;
+changeFigure:huang_boss.svg;
 黄老板:明天再说，今天先把货干完。;
+changeFigure:chen_xiaoming.svg;
 陈小明:好的，那就进入公开沟通流程。;
 jumpLabel:ss_live;
 
+label:ss_union;
+changeFigure:chen_xiaoming.svg;
+陈小明:我先找同事做联名证据包，工资单、排班表、聊天记录同步固化。;
+旁白:三位同事同意实名作证，证据链强度显著提升。;
+changeFigure:huang_boss.svg;
+黄老板:你这阵仗，像是来做审计的。;
+changeFigure:chen_xiaoming.svg;
+陈小明:不是审计，是把事实说清楚。;
+jumpLabel:ss_live;
+
 label:ss_live;
+changeFigure:chen_xiaoming.svg;
 陈小明:各位观众，现在示范标准操作。;
 陈小明:截图保存工资记录，保存排班截图，保存打卡和聊天记录。;
 陈小明:电话12333，登记单位名称、入职时间、证据线索。;
+changeFigure:huang_boss.svg;
 黄老板:你怎么比培训老师还熟。;
+changeFigure:chen_xiaoming.svg;
 陈小明:因为上一世我交过学费，这一世我只交证据。;
 
 wait:450;
 changeBg:arbitration.svg;
+playEffect:stamp.wav;
+bgm:s_Title.mp3 -volume=34;
 
 旁白:第三回合，终极仲裁。;
+changeFigure:arbitrator_nod.svg;
 仲裁员:经查，被申请人存在未支付加班费、未依法缴纳社保、未签订劳动合同等情形。;
+changeFigure:huang_boss_panicked.svg;
 黄老板:我补，我补不就行了吗。;
+changeFigure:chen_xiaoming_serious.svg;
 陈小明:还有这个，您让我用个人信息注册空壳公司，准备转移资产。;
+changeFigure:huang_boss_panicked.svg;
 黄老板:这个，这个是误会。;
+changeFigure:chen_xiaoming_serious.svg;
 陈小明:劳动合同法第八十二条，未签书面合同应支付双倍工资。;
 陈小明:如果再涉及恶意欠薪和转移财产，风险就不止民事层面。;
 
@@ -102,8 +137,11 @@ label:arb_evidence_first;
 jumpLabel:arb_core;
 
 label:arb_core;
+changeFigure:arbitrator_nod.svg;
 仲裁员:证据链完整，主张明确，依法支持主要仲裁请求。;
+changeFigure:huang_boss_panicked.svg;
 黄老板:我签，我马上签正规合同，社保补，加班费给，西班牙我不去了。;
+changeFigure:chen_xiaoming.svg;
 陈小明:早这样不就双赢了。;
 
 wait:500;
@@ -111,8 +149,10 @@ changeBg:lawful_factory.svg;
 
 旁白:一个月后，小作坊门口挂上新牌子。;
 旁白:【法治示范小微企】;
+changeFigure:huang_boss.svg;
 黄老板:家人们，劳动法真的也保护老板。;
 黄老板:员工稳定了，流程清楚了，政府还给我发了合规奖励一万块。;
+changeFigure:chen_xiaoming.svg;
 陈小明:现在播报温州特色普法小贴士。;
 陈小明:温州老板嗓门大，守法才能闯天下。;
 陈小明:瓯江潮水浪打浪，劳动合同必须上。;
@@ -132,5 +172,57 @@ changeBg:lawful_factory.svg;
 旁白:弹幕飘过。;
 旁白:【原来劳动法才是真金手指】;
 旁白:【温州人 以前拼胆子 现在拼合规】;
+旁白:【结局收集说明】三条路线可重复游玩回收，已收集结局会在台词中提示。;
+
+choose:查看结局回收板:ending_board|直接进入结局选择:ending_pick;
+
+label:ending_board;
+playEffect:unlock.wav;
+旁白:【结局回收板】;
+旁白:已解锁：结局A（ending_good）= {ending_good};
+旁白:已解锁：结局B（ending_hard）= {ending_hard};
+旁白:已解锁：结局C（ending_mediation）= {ending_mediation};
+jumpLabel:ending_pick;
+
+label:ending_pick;
+
+choose:进入合规共赢结局:ending_good|继续硬核追责结局:ending_hard|进入调解修复结局:ending_mediation;
+
+label:ending_good;
+changeFigure:chen_xiaoming_smile.svg;
+旁白:【结局A 合规共赢】;
+setVar:ending_good=true -global=true;
+陈小明:制度立住了，员工安心了，厂里订单也稳了。;
+changeFigure:huang_boss_relief.svg;
+黄老板:以前靠胆子，现在靠流程，居然更赚钱。;
+旁白:你达成了“法治示范小微企”结局。;
+旁白:【结局收集进度提示】已记录：结局A。;
+playEffect:ending.wav;
+end:;
+
+label:ending_hard;
+changeFigure:arbitrator.svg;
+旁白:【结局B 硬核追责】;
+setVar:ending_hard=true -global=true;
+仲裁员:对拒不履行事项，依法移送后续程序处理。;
+changeFigure:chen_xiaoming.svg;
+陈小明:维权不是报复，是给所有人一个可预期的明天。;
+旁白:你达成了“证据链到底”结局。;
+旁白:【结局收集进度提示】已记录：结局B。;
+playEffect:ending.wav;
+end:;
+
+label:ending_mediation;
+changeFigure:arbitrator.svg;
+旁白:【结局C 调解修复】;
+setVar:ending_mediation=true -global=true;
+仲裁员:双方确认补缴与补偿计划，分期履行并接受后续监督。;
+changeFigure:huang_boss_relief.svg;
+黄老板:我认账，也认规矩，厂子要长期做下去。;
+changeFigure:chen_xiaoming_smile.svg;
+陈小明:讲人情不如讲规则，规则稳了，人情才能长。;
+旁白:你达成了“调解修复与长期主义”结局。;
+旁白:【结局收集进度提示】已记录：结局C。;
+playEffect:ending.wav;
 
 end:;

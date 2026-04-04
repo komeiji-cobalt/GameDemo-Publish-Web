@@ -19,20 +19,56 @@
 }
 
 [class*="_Title_buttonList_"] {
-	padding-left: 10rem;
-	gap: 2.2rem;
+	padding-left: 0;
+	gap: 1.4rem;
+	justify-content: center;
+	align-items: flex-end;
+	padding-bottom: 4.2rem;
 }
 
 [class*="_Title_button_"] {
 	background: linear-gradient(135deg, var(--wz-red) 0%, var(--wz-red-dark) 100%);
 	border: 2px solid rgba(255, 249, 240, 0.9);
 	box-shadow: 0 10px 24px rgba(70, 26, 19, 0.3);
-	padding: 0.85em 1.8em 0.85em 2.2em;
+	padding: 0.85em 1.8em;
+	min-width: 17rem;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	animation: wzTitleRise 520ms cubic-bezier(0.22, 0.95, 0.36, 1) both;
+	height: 3.65rem;
+}
+
+[class*="_Title_button_"]:nth-child(2) {
+	animation-delay: 60ms;
+}
+
+[class*="_Title_button_"]:nth-child(3) {
+	animation-delay: 120ms;
+}
+
+[class*="_Title_button_"]:nth-child(4) {
+	animation-delay: 180ms;
+}
+
+[class*="_Title_button_"]:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 14px 26px rgba(70, 26, 19, 0.36);
 }
 
 [class*="_Title_button_text_"] {
 	font-family: var(--wz-title-font);
 	letter-spacing: 0.12em;
+	margin-bottom: 0 !important;
+	line-height: 1.1;
+	width: 100%;
+	justify-content: center;
+	text-align: center;
+}
+
+[class*="_Title_button_disabled_"] {
+	min-width: 17rem;
 }
 
 [class*="_Title_version_info_"] {
@@ -45,7 +81,8 @@
 [class*="_TextBox_main_"] {
 	font-family: var(--wz-body-font);
 	font-weight: 600;
-	letter-spacing: 0.07em;
+	letter-spacing: 0.035em;
+	line-height: 1.7;
 	border-radius: 22px;
 	left: 110px;
 	right: 110px;
@@ -53,6 +90,7 @@
 	min-height: 300px;
 	max-height: 300px;
 	padding: 1.2em 2em 1.4em 2em;
+	overflow: visible !important;
 }
 
 [class*="_TextBox_Background_"] {
@@ -61,16 +99,22 @@
 		repeating-linear-gradient(45deg, rgba(145, 118, 86, 0.06) 0 2px, rgba(255, 255, 255, 0) 2px 6px);
 	border: 2px solid rgba(88, 66, 41, 0.3);
 	box-shadow: 0 12px 40px var(--wz-shadow);
+	overflow: visible;
+	backdrop-filter: saturate(1.02);
 }
 
 [class*="_TextBox_showName_"] {
 	font-family: var(--wz-title-font);
 	left: 26px;
-	top: -58px;
+	top: -72px;
 	border-radius: 999px;
 	padding: 0 1.8em;
 	min-width: 9.5em;
 	height: 68px;
+	line-height: 68px;
+	z-index: 6;
+	overflow: visible;
+	white-space: nowrap;
 }
 
 [class*="_TextBox_ShowName_Background_"] {
@@ -83,10 +127,47 @@
 	color: var(--wz-ink);
 	background: none;
 	-webkit-text-fill-color: var(--wz-ink);
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+[class*="_TextBox_main_"] [class*="_textElement_"] {
+	font-variant-east-asian: proportional-width;
 }
 
 [class*="_TextBox_main_"] [class*="_inner_"] {
-	-webkit-text-stroke: 1px rgba(255, 250, 242, 0.8);
+	-webkit-text-stroke: 0.85px rgba(255, 250, 242, 0.62);
+}
+
+[class*="_Figure_"] {
+	animation: wzFigureIn 420ms ease-out both;
+}
+
+[class*="_Figure_"] img {
+	filter: drop-shadow(0 18px 18px rgba(12, 8, 6, 0.34)) saturate(0.96) contrast(1.04);
+}
+
+@keyframes wzFigureIn {
+	0% {
+		opacity: 0;
+		transform: translateY(20px) scale(0.98);
+		filter: blur(2px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0) scale(1);
+		filter: blur(0);
+	}
+}
+
+@keyframes wzTitleRise {
+	0% {
+		opacity: 0;
+		transform: translateY(18px) scale(0.96);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0) scale(1);
+	}
 }
 
 /* Choose panel */
@@ -100,16 +181,28 @@
 	border-radius: 18px;
 	background: linear-gradient(125deg, rgba(119, 38, 28, 0.95), rgba(71, 21, 15, 0.95));
 	box-shadow: 0 14px 26px rgba(0, 0, 0, 0.34);
+	padding: 0 1.2rem;
 }
 
 [class*="_Choose_item_"] {
 	min-width: 100%;
 	border-radius: 14px;
 	font-family: var(--wz-body-font);
+	font-size: 168%;
+	line-height: 1.25;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 0.35em 0.9em;
 	color: #3d3028;
 	background: linear-gradient(145deg, rgba(252, 245, 233, 0.97), rgba(236, 226, 208, 0.96));
 	border: 1px solid rgba(130, 94, 67, 0.42);
 	box-shadow: 0 8px 18px rgba(26, 13, 8, 0.22);
+}
+
+[class*="_Choose_item_"]::first-line {
+	font-weight: 700;
 }
 
 [class*="_Choose_item_"]:hover {
@@ -121,14 +214,19 @@
 /* Mobile */
 @media (max-width: 900px) {
 	[class*="_Title_buttonList_"] {
-		padding-left: 2.2rem;
+		padding-left: 0;
 		gap: 1.2rem;
 	}
 
 	[class*="_Title_button_"] {
 		margin-top: 1.1rem;
 		transform: scale(0.85);
-		transform-origin: left center;
+		transform-origin: center center;
+		min-width: 12.5rem;
+	}
+
+	[class*="_Title_button_text_"] {
+		letter-spacing: 0.08em;
 	}
 
 	[class*="_TextBox_main_"] {
@@ -138,10 +236,11 @@
 		min-height: 250px;
 		max-height: 250px;
 		padding: 0.9em 1.2em 1em 1.2em;
+		line-height: 1.62;
 	}
 
 	[class*="_TextBox_showName_"] {
-		top: -48px;
+		top: -58px;
 		height: 54px;
 		line-height: 54px;
 		min-width: 8.4em;
@@ -155,5 +254,7 @@
 	[class*="_Choose_item_"] {
 		font-size: 150%;
 		height: 84px;
+		line-height: 1.3;
+		padding: 0.25em 0.6em;
 	}
 }

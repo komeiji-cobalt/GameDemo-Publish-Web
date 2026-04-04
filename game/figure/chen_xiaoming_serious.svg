@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1536" viewBox="0 0 1024 1536">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#273648"/>
+      <stop offset="100%" stop-color="#18212c"/>
+    </linearGradient>
+    <linearGradient id="coat" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#dde7f2"/>
+      <stop offset="100%" stop-color="#b9c8d9"/>
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="1536" fill="url(#bg)"/>
+  <ellipse cx="512" cy="1450" rx="260" ry="48" fill="#000" opacity="0.3"/>
+  <path d="M312 1210 Q512 1080 712 1210 L742 1536 L282 1536 Z" fill="url(#coat)"/>
+  <ellipse cx="512" cy="892" rx="178" ry="224" fill="#f1c39f"/>
+  <path d="M344 862 Q366 656 512 618 Q658 656 680 862 Q612 778 512 778 Q412 778 344 862 Z" fill="#1a212b"/>
+  <circle cx="442" cy="886" r="16" fill="#242a35"/>
+  <circle cx="582" cy="886" r="16" fill="#242a35"/>
+  <path d="M418 834 Q442 820 466 830" stroke="#242a35" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <path d="M558 830 Q582 820 606 834" stroke="#242a35" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <path d="M438 1002 Q512 978 586 1002" stroke="#a26f52" stroke-width="12" fill="none" stroke-linecap="round"/>
+  <rect x="334" y="1184" width="356" height="126" rx="16" fill="#edf3fa" opacity="0.95"/>
+  <text x="512" y="1262" text-anchor="middle" fill="#253849" font-size="44" font-family="KaiTi, serif">陈小明</text>
+  <text x="512" y="1322" text-anchor="middle" fill="#4e667d" font-size="28" font-family="KaiTi, serif">证据已就位 · 准备开庭</text>
+</svg>
