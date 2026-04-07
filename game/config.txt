@@ -1,11 +1,11 @@
-Game_name:重生之我在温州当仲裁侠;
-Game_key:WenzhouArbiter;
+Game_name:重生之我是劳动法战神;
+Game_key:LaborLawWarGod;
 Title_img:WebGAL_MyGO_Title_Image.webp;
 Title_bgm:s_Title.mp3;
 Game_Logo:WebGAL_MyGO_Enter.webp;
 Default_Language:zh_CN;
 Show_panic:true;
-Enable_Appreciation:true;
+Enable_Appreciation:false;
 Legacy_Expression_Blend_Mode:true;
 Positioning_Type:M_3_1_0;
 Stage_Width:2560;

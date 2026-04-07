@@ -4,7 +4,7 @@
 	--wz-paper-dark: #e7dbc6;
 	--wz-red: #aa3d2d;
 	--wz-red-dark: #7a261b;
-	--wz-green: #2f6a55;
+	--wz-green: #ffd382;
 	--wz-shadow: rgba(18, 11, 8, 0.45);
 	--wz-title-font: JiangChengYuanTi, LXGW, KaiTi, serif;
 	--wz-body-font: JiangChengYuanTi, WebgalUI, LXGW, serif;
@@ -91,6 +91,7 @@
 	max-height: 300px;
 	padding: 1.2em 2em 1.4em 2em;
 	overflow: visible !important;
+	font-size: larger;
 }
 
 [class*="_TextBox_Background_"] {
@@ -118,9 +119,9 @@
 }
 
 [class*="_TextBox_ShowName_Background_"] {
-	background: linear-gradient(140deg, var(--wz-green), #235140);
+	background: linear-gradient(140deg, var(--wz-green), #ef860d);
 	border: 3px solid rgba(255, 250, 240, 0.8);
-	box-shadow: 0 8px 22px rgba(25, 54, 44, 0.35);
+	box-shadow: 0 8px 22px rgba(255, 112, 51, 0.35);
 }
 
 [class*="_TextBox_main_"] [class*="_outer_"] {
@@ -238,11 +239,11 @@
 		padding: 0.9em 1.2em 1em 1.2em;
 		line-height: 1.62;
 	}
-
+	
 	[class*="_TextBox_showName_"] {
-		top: -58px;
-		height: 54px;
-		line-height: 54px;
+		top: -100px;
+		height: 100px;
+		line-height: 100px;
 		min-width: 8.4em;
 		padding: 0 1.3em;
 	}

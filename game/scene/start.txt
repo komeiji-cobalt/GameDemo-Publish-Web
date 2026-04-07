@@ -1,228 +1,202 @@
-changeBg:workshop.svg;
+changeBg:office_rebirth.svg;
 bgm:s_Title.mp3 -volume=42;
-changeFigure:chen_xiaoming.svg;
-;
-旁白:一道白光掠过，穿越的呼啸声和微信到账提示音缠在一起。;
-陈小明:我重生了。;
-陈小明:上一世我给黄老板打工三年。;
-陈小明:他说温州人不讲加班费，我信了。;
-陈小明:他说社保自己交交嘛，我又信了。;
-陈小明:后来他跑路去西班牙卖皮鞋，给我留了两百多万债务。;
-陈小明:这一世，我要用劳动法，夺回一切。;
-陈小明:今天是2026年4月2日。;
-陈小明:距离他跑路还有两个月，还来得及。;
+playEffect:alert.wav;
+旁白:手机在老式木桌上震动，发出嗡嗡声。;
+playEffect:unlock.wav;
+旁白:咻——嗡！耳边像有玻璃碎裂，世界在瞬间重组。;
+changeFigure:chen_xiaoming_serious.svg;
+旁白:破旧皮革作坊办公室里，褪色锦旗挂满整面墙。;
+旁白:窗外是温州工业区街景，远处能看见“中国鞋都”字样。;
+旁白:账本、算盘和智能手机挤在同一张木桌上。;
+旁白:翻页日历停在2026年4月2日。;
 
+陈小明:我重生了。;
+陈小明:上一世，我给黄老板打工三年。;
+陈小明:他说温州人不讲加班费，我信了。;
+陈小明:他说社保自己交交嘛，我也照做了。;
+陈小明:结果他卷款跑路去西班牙，留给我两百多万债务。;
+陈小明:这一世，我要用劳动法夺回一切。;
+旁白:陈小明翻出手机日历，手指停在今天。;
+陈小明:今天是2026年4月2日，距离他跑路还有两个月。;
+陈小明:这一世，我以劳动法、劳动合同法、社会保险法为武器，依法维权。;
+系统提示:欢迎来到劳动法维权实战。请在关键时刻做出正确选择，维护你的合法权益。;
+
+wait:300;
+旁白:【第一幕 加班费之战】;
+changeBg:office_rebirth.svg;
 changeFigure:huang_boss.svg;
+旁白:办公室门被猛地推开。;
 黄老板:小明啊，隔壁厂都在搞996福报，我们温州人不能输。;
 黄老板:今晚这批皮带不打完，明天西班牙客户要生气的呀。;
-陈小明:黄总，根据劳动法第四十一条，您这个属于延长工作时间。;
-黄老板:哎呦法不法，温州老板靠感情。;
-黄老板:晚上请你吃灯盏糕，就当加班费了好不啦。;
-
-旁白:第一回合，加班费之战。;
-playEffect:alert.wav;
-wait:300;
-
-陈小明:黄总，我过去一年加班872小时，证据都在这里。;
-陈小明:根据劳动法第四十四条，工作日加班1.5倍，休息日2倍，法定节假日3倍。;
-陈小明:再按浙江省企业工资支付管理办法核算。;
-陈小明:您欠我加班工资87653.2元，零头我给您抹了。;
-黄老板:你这是要搞垮温州民营企业啊。;
-
-choose:直接摆法条硬刚:ot_hard|先开录音再摊牌:ot_smart;
-
-label:ot_hard;
 changeFigure:chen_xiaoming.svg;
-陈小明:黄总，感情不等于白干，法条在这，签字确认吧。;
+陈小明:黄总，根据劳动法第四十一条，加班需要与员工协商。;
+陈小明:而且每日不得超过3小时，每月不得超过36小时。;
 changeFigure:huang_boss.svg;
-黄老板:你眼神怎么突然这么可怕。;
-jumpLabel:ot_core;
+黄老板:哎呦，法不法，温州老板靠感情。;
+黄老板:晚上请你吃灯盏糕，加班费就算了好不啦。;
 
-label:ot_smart;
-旁白:陈小明悄悄把手机录音打开，连语气都放慢了半拍。;
+label:act1_choice;
+choose:严词拒绝，要求依法支付加班费:act1_a|妥协接受，老板请吃饭也算有诚意:act1_b|主动降价，协商按照1.2倍支付加班费:act1_c;
+
+label:act1_b;
 changeFigure:chen_xiaoming.svg;
-陈小明:黄总，您刚刚说“灯盏糕抵加班费”，我录下来了，咱们讲证据。;
+陈小明:行吧，有灯盏糕吃也不错。;
 changeFigure:huang_boss.svg;
-黄老板:你怎么还带技术流。;
-jumpLabel:ot_core;
+黄老板:这就对了嘛，温州人讲义气。;
+系统提示:❌ 选择错误。加班费是法定权利，不能以任何形式替代。;
+系统提示:根据劳动法第四十四条，加班必须依法支付加班费。请重新选择。;
+jumpLabel:act1_choice;
 
-label:ot_core;
+label:act1_c;
+changeFigure:chen_xiaoming.svg;
+陈小明:黄总，1.2倍行不行，比法定1.5倍少点。;
+changeFigure:huang_boss.svg;
+黄老板:1.1倍，不能再多了。;
+系统提示:❌ 选择错误。加班费标准属于法律强制规定，不能随意协商降低。;
+系统提示:工作日加班应按1.5倍工资支付。请重新选择。;
+jumpLabel:act1_choice;
+
+label:act1_a;
 changeFigure:chen_xiaoming_serious.svg;
-陈小明:您当年是创业，我现在是就业，身份不同，规则也不同。;
-陈小明:阿黄叔，温州人最讲实际对伐。;
-陈小明:劳动法就是国家和我们的感情。;
-旁白:陈小明身后仿佛浮现虚拟字幕。;
-旁白:【00后整顿职场之温州分顿】;
+陈小明:黄总，感情归感情，法律归法律。;
+陈小明:根据劳动法第四十四条，工作日1.5倍，休息日2倍，法定节假日3倍。;
+changeFigure:huang_boss_panicked.svg;
+黄老板:小明，你这样我很为难啊。;
+changeFigure:chen_xiaoming_serious.svg;
+陈小明:我算过了，过去12个月每月加班至少36小时，共432小时。;
+陈小明:我月工资6000，按法定标准，您欠我加班费四万一千三百七十六元。;
+系统提示:✅ 选择正确。加班费是劳动者法定权利，用人单位必须依法支付。;
+系统提示:牢记倍数规则：工作日1.5倍，休息日2倍，法定节假日3倍。;
+changeFigure:huang_boss.svg;
+黄老板:好好好，算你小子厉害，先记账上。;
+changeFigure:chen_xiaoming.svg;
+陈小明:第一步成功，但这只是开始。;
 
 wait:450;
-changeBg:insurance.svg;
+旁白:【第二幕 社保攻坚战】;
+changeBg:office_payday.svg;
 playEffect:live.wav;
-
-旁白:第二回合，社保攻坚战。;
+旁白:一个月后发工资日，财务窗口贴着“现金结算”红纸。;
 changeFigure:huang_boss.svg;
-黄老板:我给你发现金不香吗，社保你自己交，我还多给你两百。;
+黄老板:小明，这是你这个月工资。社保你自己交，我多给你三百现金。;
 changeFigure:chen_xiaoming.svg;
-陈小明:家人们谁懂啊，遇到不交社保的老板怎么办。;
-陈小明:记住第一点，社会保险法第五十八条，用人单位必须三十日内办理社保。;
-陈小明:记住第二点，温州12333热线，打这个比求菩萨保佑有用。;
+陈小明:黄总，这不对。社保不能给现金让我自己交。;
 changeFigure:huang_boss.svg;
-黄老板:别拍了别拍了，我们温州人……;
-changeFigure:chen_xiaoming.svg;
-陈小明:对，温州人现在带头守法。;
-陈小明:直播间三万人看着呢，黄总，要不您给大家唱段瓯剧，我就关直播。;
-旁白:礼物特效刷屏。;
-旁白:【温州老板送出一首 向法律低头】;
+黄老板:灵活一点嘛，隔壁厂都这样，你多拿三百不好吗。;
 
-choose:开直播当场普法:ss_live|先私下沟通给整改机会:ss_private|先找同事联名取证:ss_union;
+label:act2_choice;
+choose:坚决拒绝，要求公司依法缴纳社保:act2_a|妥协接受，觉得现金更灵活:act2_b|讨价还价，要求提高现金补贴至五百元:act2_c;
 
-label:ss_private;
+label:act2_b;
 changeFigure:chen_xiaoming.svg;
-陈小明:我先给您二十四小时整改窗口，补社保，补台账，补合同。;
+陈小明:也是，现金到手更实在。;
 changeFigure:huang_boss.svg;
-黄老板:明天再说，今天先把货干完。;
-changeFigure:chen_xiaoming.svg;
-陈小明:好的，那就进入公开沟通流程。;
-jumpLabel:ss_live;
+黄老板:对吧，年轻人就要灵活。;
+系统提示:❌ 选择错误。社保是法定义务，现金不能替代。;
+系统提示:一旦发生工伤、医疗等风险，没有社保会造成重大损失。请重新选择。;
+jumpLabel:act2_choice;
 
-label:ss_union;
+label:act2_c;
 changeFigure:chen_xiaoming.svg;
-陈小明:我先找同事做联名证据包，工资单、排班表、聊天记录同步固化。;
-旁白:三位同事同意实名作证，证据链强度显著提升。;
+陈小明:三百太少了，五百行不行。;
 changeFigure:huang_boss.svg;
-黄老板:你这阵仗，像是来做审计的。;
-changeFigure:chen_xiaoming.svg;
-陈小明:不是审计，是把事实说清楚。;
-jumpLabel:ss_live;
+黄老板:四百五，不能再多。;
+系统提示:❌ 选择错误。社保不是可讨价还价的福利，而是法定强制义务。;
+系统提示:无论补贴多少现金，都不能替代社保保障。请重新选择。;
+jumpLabel:act2_choice;
 
-label:ss_live;
+label:act2_a;
+changeFigure:chen_xiaoming_serious.svg;
+陈小明:黄总，这是违法行为。;
+陈小明:社会保险法第五十八条规定，用人单位应在用工之日起30日内办理社保登记。;
+changeFigure:huang_boss_panicked.svg;
+黄老板:哪有这么严重，大家都这样。;
+changeFigure:chen_xiaoming_serious.svg;
+陈小明:很严重。今天我下楼摔伤就是工伤。;
+陈小明:有社保，工伤保险基金支付；没社保，您可能自掏几十万。;
+系统提示:✅ 选择正确。社保是法定义务，不能协商放弃，也不能现金替代。;
+changeFigure:huang_boss_panicked.svg;
+黄老板:那我下个月给你交。;
 changeFigure:chen_xiaoming.svg;
-陈小明:各位观众，现在示范标准操作。;
-陈小明:截图保存工资记录，保存排班截图，保存打卡和聊天记录。;
-陈小明:电话12333，登记单位名称、入职时间、证据线索。;
-changeFigure:huang_boss.svg;
-黄老板:你怎么比培训老师还熟。;
-changeFigure:chen_xiaoming.svg;
-陈小明:因为上一世我交过学费，这一世我只交证据。;
+陈小明:不行，这个月就要交，而且从入职日起全额补缴。;
 
 wait:450;
-changeBg:arbitration.svg;
+旁白:【第三幕 终极对决】;
+changeBg:corridor_night.svg;
 playEffect:stamp.wav;
-bgm:s_Title.mp3 -volume=34;
-
-旁白:第三回合，终极仲裁。;
-changeFigure:arbitrator_nod.svg;
-仲裁员:经查，被申请人存在未支付加班费、未依法缴纳社保、未签订劳动合同等情形。;
-changeFigure:huang_boss_panicked.svg;
-黄老板:我补，我补不就行了吗。;
+旁白:走廊灯光昏暗，黄老板办公室门缝透出光，隐约有拉行李箱的声音。;
 changeFigure:chen_xiaoming_serious.svg;
-陈小明:还有这个，您让我用个人信息注册空壳公司，准备转移资产。;
+陈小明:黄总，这么晚收拾行李，是要去西班牙看球赛吗。;
 changeFigure:huang_boss_panicked.svg;
-黄老板:这个，这个是误会。;
+黄老板:你……你怎么知道。;
 changeFigure:chen_xiaoming_serious.svg;
-陈小明:劳动合同法第八十二条，未签书面合同应支付双倍工资。;
-陈小明:如果再涉及恶意欠薪和转移财产，风险就不止民事层面。;
-
-choose:先算钱后举证:arb_money_first|先举证后算钱:arb_evidence_first;
-
-label:arb_money_first;
-陈小明:先算账。;
-陈小明:加班费87653.2元，未签合同期间双倍工资按月核算，社保补缴情形另计。;
-陈小明:再举证，空壳公司注册资料、聊天记录、流水截图都在这里。;
-jumpLabel:arb_core;
-
-label:arb_evidence_first;
-陈小明:先举证。;
-陈小明:这是空壳公司登记信息，这是资金流转路径，这是要求我配合转移资产的聊天记录。;
-陈小明:再算账，加班费、双倍工资、社保补缴，逐项核算都在表里。;
-jumpLabel:arb_core;
-
-label:arb_core;
-changeFigure:arbitrator_nod.svg;
-仲裁员:证据链完整，主张明确，依法支持主要仲裁请求。;
+陈小明:我还知道，您用我身份证注册了欧贸皮具进出口公司，准备转移资产。;
 changeFigure:huang_boss_panicked.svg;
-黄老板:我签，我马上签正规合同，社保补，加班费给，西班牙我不去了。;
+黄老板:你到底想怎样。;
+changeFigure:chen_xiaoming_serious.svg;
+陈小明:我只想拿回我应得的。;
+
+label:act3_choice;
+choose:要求立即结清所有费用，否则举报:act3_a|低声哀求，求老板结清工资不要跑路:act3_b|接受转让公司，以此抵消所有债务:act3_c;
+
+label:act3_b;
 changeFigure:chen_xiaoming.svg;
-陈小明:早这样不就双赢了。;
+陈小明:黄总，求您了，把我的工资结了吧。;
+changeFigure:huang_boss.svg;
+黄老板:现在知道求我了？晚了。;
+系统提示:❌ 选择错误。面对违法行为，乞求通常无效。应依法采取有力维权措施。请重新选择。;
+jumpLabel:act3_choice;
+
+label:act3_c;
+changeFigure:chen_xiaoming.svg;
+陈小明:那家公司转给我，咱们两清。;
+changeFigure:huang_boss.svg;
+黄老板:行啊，但债务你也得接着。;
+系统提示:❌ 选择错误。这是陷阱。承接公司可能承担未知债务和法律风险。请重新选择。;
+jumpLabel:act3_choice;
+
+label:act3_a;
+changeFigure:chen_xiaoming_serious.svg;
+陈小明:我已整理全部证据。;
+陈小明:包括加班记录、未缴社保证明、冒用身份证注册公司的证据。;
+陈小明:您有两个选择。;
+陈小明:第一，立即结清拖欠工资、加班费41376元、双倍工资差额、社保补缴等，合计约128000元。;
+陈小明:第二，我现在拨打12333和12345，并向市场监管部门举报虚假登记。;
+系统提示:✅ 选择正确。严重违法情形下，应固定证据并依法投诉、仲裁维权。;
+系统提示:维权电话：12333（劳动保障监察）、12345（政务服务便民热线）。;
+changeFigure:huang_boss_panicked.svg;
+黄老板:我付，我现在就转账。那家公司我马上去注销。;
 
 wait:500;
-changeBg:lawful_factory.svg;
-
-旁白:一个月后，小作坊门口挂上新牌子。;
-旁白:【法治示范小微企】;
-changeFigure:huang_boss.svg;
-黄老板:家人们，劳动法真的也保护老板。;
-黄老板:员工稳定了，流程清楚了，政府还给我发了合规奖励一万块。;
-changeFigure:chen_xiaoming.svg;
-陈小明:现在播报温州特色普法小贴士。;
-陈小明:温州老板嗓门大，守法才能闯天下。;
-陈小明:瓯江潮水浪打浪，劳动合同必须上。;
-陈小明:灯盏糕鱼丸香，五险一金要配齐。;
-陈小明:重生复仇是玩笑，依法维权才正道。;
-
-旁白:【本片重点法条】;
-旁白:一 劳动法第四十四条，加班工资计算标准。;
-旁白:二 劳动合同法第八十二条，未签合同的双倍工资。;
-旁白:三 温州劳动保障监察咨询电话，12333。;
-
-旁白:温馨提示。;
-旁白:重生是虚构，维权是现实。;
-旁白:保存证据，理性维权，温州营商环境需要你我共建。;
-
-旁白:最后镜头里，陈小明和黄老板勾肩搭背吃灯盏糕。;
-旁白:弹幕飘过。;
-旁白:【原来劳动法才是真金手指】;
-旁白:【温州人 以前拼胆子 现在拼合规】;
-旁白:【结局收集说明】三条路线可重复游玩回收，已收集结局会在台词中提示。;
-
-choose:查看结局回收板:ending_board|直接进入结局选择:ending_pick;
-
-label:ending_board;
-playEffect:unlock.wav;
-旁白:【结局回收板】;
-旁白:已解锁：结局A（ending_good）= {ending_good};
-旁白:已解锁：结局B（ending_hard）= {ending_hard};
-旁白:已解锁：结局C（ending_mediation）= {ending_mediation};
-jumpLabel:ending_pick;
-
-label:ending_pick;
-
-choose:进入合规共赢结局:ending_good|继续硬核追责结局:ending_hard|进入调解修复结局:ending_mediation;
-
-label:ending_good;
-changeFigure:chen_xiaoming_smile.svg;
-旁白:【结局A 合规共赢】;
-setVar:ending_good=true -global=true;
-陈小明:制度立住了，员工安心了，厂里订单也稳了。;
+旁白:【完美结局】;
+changeBg:mediation_room.svg;
+changeFigure:arbitrator_nod.svg;
+旁白:一个月后，劳动仲裁委员会调解室。;
+仲裁员:经调解，双方达成协议。;
+仲裁员:一、黄某一次性支付陈小明工资、加班费、赔偿金等共计128000元。;
+仲裁员:二、黄某自协议签订之日起三日内为陈小明补缴社会保险。;
+仲裁员:三、黄某立即办理涉案公司注销手续。;
 changeFigure:huang_boss_relief.svg;
-黄老板:以前靠胆子，现在靠流程，居然更赚钱。;
-旁白:你达成了“法治示范小微企”结局。;
-旁白:【结局收集进度提示】已记录：结局A。;
-playEffect:ending.wav;
-end:;
+黄老板:小明，我服了。劳动法，真不能小看。;
 
-label:ending_hard;
-changeFigure:arbitrator.svg;
-旁白:【结局B 硬核追责】;
-setVar:ending_hard=true -global=true;
-仲裁员:对拒不履行事项，依法移送后续程序处理。;
-changeFigure:chen_xiaoming.svg;
-陈小明:维权不是报复，是给所有人一个可预期的明天。;
-旁白:你达成了“证据链到底”结局。;
-旁白:【结局收集进度提示】已记录：结局B。;
-playEffect:ending.wav;
-end:;
-
-label:ending_mediation;
-changeFigure:arbitrator.svg;
-旁白:【结局C 调解修复】;
-setVar:ending_mediation=true -global=true;
-仲裁员:双方确认补缴与补偿计划，分期履行并接受后续监督。;
-changeFigure:huang_boss_relief.svg;
-黄老板:我认账，也认规矩，厂子要长期做下去。;
+changeBg:workshop.svg;
 changeFigure:chen_xiaoming_smile.svg;
-陈小明:讲人情不如讲规则，规则稳了，人情才能长。;
-旁白:你达成了“调解修复与长期主义”结局。;
-旁白:【结局收集进度提示】已记录：结局C。;
-playEffect:ending.wav;
+旁白:三个月后，陈小明的劳动法咨询工作室开业。;
+陈小明:家人们，劳动法不是用来搞垮企业的。;
+陈小明:它是让劳资关系更和谐、更可持续的规则。;
+陈小明:劳动合同必须签，不签双倍工资见。;
+陈小明:加班费用要算清，法定倍数要记明。;
+陈小明:社保不是选择题，用人单位必须缴。;
+陈小明:维权证据保存好，协商仲裁是正道。;
 
+旁白:【维权实用步骤】;
+旁白:1 保存证据：合同、工资条、考勤记录、工作证、微信聊天记录等。;
+旁白:2 明确诉求：计算拖欠工资、加班费、赔偿金等具体金额。;
+旁白:3 先行协商：与用人单位正式沟通并明确要求。;
+旁白:4 寻求调解：向工会或调解组织求助。;
+旁白:5 行政投诉：拨打12333向劳动监察部门投诉。;
+旁白:6 申请仲裁：向劳动人事争议仲裁委员会申请仲裁。;
+旁白:7 法院诉讼：对仲裁结果不服，可向人民法院提起诉讼。;
+
+旁白:【温馨提示】重生是虚构，依法维权是现实。;
 end:;
