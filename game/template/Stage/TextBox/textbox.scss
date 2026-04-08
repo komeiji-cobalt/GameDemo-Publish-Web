@@ -1,21 +1,22 @@
 .TextBox_main {
   z-index: 3;
   position: absolute;
-  right: 120px;
-  min-height: 330px;
-  max-height: 330px;
-  background-blend-mode: darken;
-  border-radius: 48px;
-  bottom: 60px;
-  left: 120px;
-  font-weight: normal;
+  right: 110px;
+  left: 110px;
+  bottom: 36px;
+  min-height: 300px;
+  max-height: 300px;
+  border-radius: 22px;
   color: white;
-  padding: 56px 64px;
+  font-weight: 600;
+  font-family: var(--wz-body-font, WebgalUI, serif);
+  letter-spacing: 0.035em;
+  line-height: 1.7;
+  padding: 1.2em 2em 1.4em 2em;
   box-sizing: border-box;
   display: flex;
   flex-flow: column;
   align-items: flex-start;
-  letter-spacing: normal;
   transition: left 0.33s;
   transform: scale(0.9);
   width: -webkit-fill-available;
@@ -23,14 +24,15 @@
   width: stretch;
   max-width: 2320px;
   justify-self: center;
+  overflow: visible !important;
 
   &[data-auto='true'] {
     &::before,
     &::after {
-      content: '▶ AUTO';
+      content: '> AUTO';
       position: absolute;
-      right: 120px;
-      bottom: 275px;
+      right: 96px;
+      bottom: 252px;
       font-size: 48px;
       color: #ff3b72;
       animation: auto-blink 1s infinite;
@@ -52,12 +54,15 @@
   0% {
     opacity: 0;
   }
+
   49% {
     opacity: 0;
   }
+
   50% {
     opacity: 1;
   }
+
   100% {
     opacity: 1;
   }
@@ -65,11 +70,14 @@
 
 .TextBox_Background {
   z-index: 2;
-  background: rgba(255, 255, 255, 0.8);
+  background:
+    linear-gradient(0deg, rgba(232, 220, 199, 0.9), rgba(248, 241, 229, 0.94)),
+    repeating-linear-gradient(45deg, rgba(145, 118, 86, 0.06) 0 2px, rgba(255, 255, 255, 0) 2px 6px);
   opacity: 1 !important;
-  box-shadow: 0px 6px 0px rgba(190, 190, 190, 0.8);
-  border: 2px solid rgba(190, 190, 190, 0.8);
-  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(18, 11, 8, 0.45);
+  border: 2px solid rgba(88, 66, 41, 0.3);
+  overflow: visible;
+  backdrop-filter: saturate(1.02);
 
   &::after {
     content: '';
@@ -113,26 +121,32 @@
     transform: scaleX(3.2) scaleY(3) translateY(0) rotate(0deg);
     filter: drop-shadow(0 8px 1px rgba(120, 120, 120, 0.7));
   }
+
   15% {
     transform: scaleX(3.2) scaleY(3.2) translateY(-2px) rotate(0deg);
     filter: drop-shadow(0 6px 1px rgba(120, 120, 120, 0.5));
   }
+
   30% {
     transform: scaleX(3.2) scaleY(3.2) translateY(-4px) rotate(-20deg);
     filter: drop-shadow(2px 4px 1px rgba(120, 120, 120, 0.4));
   }
+
   50% {
     transform: scaleX(3.2) scaleY(3.2) translateY(-6px) rotate(20deg);
     filter: drop-shadow(-2px 2px 1px rgba(120, 120, 120, 0.3));
   }
+
   60% {
     transform: scaleX(3.2) scaleY(3.2) translateY(-5.5px) rotate(-10deg);
     filter: drop-shadow(1px 3px 1px rgba(120, 120, 120, 0.35));
   }
+
   70% {
     transform: scaleX(3.2) scaleY(3.2) translateY(-4px) rotate(0deg);
     filter: drop-shadow(0 5px 1px rgba(120, 120, 120, 0.45));
   }
+
   100% {
     transform: scaleX(3.2) scaleY(2.4) translateY(0) rotate(0deg);
     filter: drop-shadow(0 8px 1px rgba(120, 120, 120, 0.7));
@@ -150,10 +164,10 @@
   white-space: nowrap;
   left: 0;
   top: 0;
-  background: rgb(80, 80, 80);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+  color: #2d2823;
+  background: none;
+  -webkit-text-fill-color: #2d2823;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.35);
   z-index: 2;
 }
 
@@ -162,7 +176,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  -webkit-text-stroke: 2px rgb(255, 255, 255);
+  -webkit-text-stroke: 0.85px rgba(255, 250, 242, 0.62);
   z-index: 1;
   visibility: hidden;
 }
@@ -178,29 +192,31 @@
 }
 
 .TextBox_showName {
-  padding-left: 48px;
-  padding-right: 120px;
-  min-width: 10em;
+  padding-left: 1.8em;
+  padding-right: 1.8em;
+  min-width: 9.5em;
   max-width: 16em;
   position: absolute;
-  left: -8px !important;
-  top: -92px;
-  height: 105px;
-  line-height: 110px;
-  border-radius: 9999px;
-  z-index: 3;
-  border: 4px solid rgba(255, 255, 255, 0);
-  font-size: 275% !important;
-  overflow: hidden;
+  left: 26px !important;
+  top: -72px;
+  height: 68px;
+  line-height: 68px;
+  border-radius: 999px;
+  z-index: 6;
+  border: 0;
+  font-size: 248% !important;
+  overflow: visible;
+  white-space: nowrap;
+  font-family: var(--wz-title-font, WebgalUI, serif);
 }
 
 .TextBox_ShowName_Background {
   z-index: 2;
-  background: linear-gradient(135deg, #ff5081 20%, #ff3b72 20%);
-  border: 5px solid rgba(255, 255, 255, 1);
+  background: linear-gradient(140deg, #ffd382, #ef860d);
+  border: 3px solid rgba(255, 250, 240, 0.8);
   opacity: 1 !important;
-  overflow: hidden;
-  box-shadow: none;
+  overflow: visible;
+  box-shadow: 0 8px 22px rgba(255, 112, 51, 0.35);
 
   &::after {
     content: '';
@@ -245,8 +261,9 @@
   position: absolute;
   left: 0;
   top: 0;
-  color: #fff;
+  color: #2d2823;
   z-index: 2;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.35);
 }
 
 .innerName {
@@ -255,14 +272,34 @@
   top: 0;
   z-index: 1;
   color: transparent;
-  -webkit-text-stroke: 6px #ff3b72;
+  -webkit-text-stroke: 0.85px rgba(255, 250, 242, 0.62);
 }
 
 .text {
-  line-height: 75px !important;
+  line-height: 1.7 !important;
   overflow: hidden;
-  font-size: 240% !important;
+  font-size: 218% !important;
   padding: 0 !important;
+}
+
+@media (max-width: 900px) {
+  .TextBox_main {
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    min-height: 250px;
+    max-height: 250px;
+    padding: 0.9em 1.2em 1em 1.2em;
+    line-height: 1.62;
+  }
+
+  .TextBox_showName {
+    top: -100px;
+    height: 100px;
+    line-height: 100px;
+    min-width: 8.4em;
+    padding: 0 1.3em;
+  }
 }
 
 @keyframes showSoftly {
