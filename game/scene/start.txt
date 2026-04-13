@@ -1,4 +1,3 @@
-changeBg:office_rebirth.png;
 bgm:s_Title.mp3 -volume=42;
 playEffect:alert.wav;
 :手机在老式木桌上震动，发出嗡嗡声。;
@@ -173,7 +172,7 @@ changeFigure:huang_boss_panicked.png;
 wait:500;
 :【完美结局】;
 changeBg:mediation_room.png;
-changeFigure:arbitrator.png;
+changeFigure:arbitrator.png -transform={"position":{"x":-520,"y":659},"scale":{"x":2,"y":1.967},"rotation":0,"colorRed":250,"colorGreen":250,"colorBlue":250};
 :一个月后，劳动仲裁委员会调解室。;
 仲裁员:经调解，双方达成协议。;
 仲裁员:一、黄某一次性支付陈小明工资、加班费、赔偿金等共计128000元。;

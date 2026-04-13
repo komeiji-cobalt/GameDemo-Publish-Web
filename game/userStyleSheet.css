@@ -246,20 +246,28 @@
 	animation: wzInfoIn 420ms ease-out 380ms both;
 }
 
-[class*="_Logo_main_"] {
+/* [class*="_Logo_main_"] {
+	position: fixed !important;
+	inset: 0 !important;
+	width: 100vw !important;
+	height: 100vh !important;
 	background-repeat: no-repeat !important;
-	background-size: min(86vw, 1240px) auto !important;
-	background-position: center top 1.1rem !important;
+	background-size: cover !important;
+	background-position: center center !important;
 	image-rendering: auto;
-	filter: drop-shadow(0 14px 18px rgba(7, 10, 14, 0.58)) contrast(1.03) saturate(1.02);
+	filter: none;
 	transform: translateZ(0);
 	backface-visibility: hidden;
 	will-change: opacity, transform;
 }
 
 [class*="_Logo_Back_"] {
+	position: fixed !important;z
+	inset: 0 !important;
+	width: 100vw !important;
+	height: 100vh !important;
 	background: transparent !important;
-}
+} */
 
 @keyframes wzTitleMenuIn {
 	0% {
@@ -324,7 +332,7 @@
 	}
 
 	[class*="_Logo_main_"] {
-		background-size: min(96vw, 980px) auto !important;
-		background-position: center top 0.8rem !important;
+		background-size: cover !important;
+		background-position: center center !important;
 	}
 }

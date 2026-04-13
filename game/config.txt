@@ -2,7 +2,7 @@ Game_name:重生之我是劳动法战神;
 Game_key:LaborLawWarGod;
 Title_img:TitleBG.jpg;
 Title_bgm:s_Title.mp3;
-Game_Logo:EnterBG.png;
+Game_Logo:EnterBG.webp;
 Default_Language:zh_CN;
 Show_panic:true;
 Enable_Appreciation:false;
