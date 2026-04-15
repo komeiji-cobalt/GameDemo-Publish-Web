@@ -198,9 +198,29 @@
       (() => {
         const isIOS = !!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
         if ('serviceWorker' in navigator && !isIOS) {
+          const injectedBuildId = '__BUILD_ID__';
+          const moduleSrc = document.querySelector('script[type="module"][src]')?.getAttribute('src') || '';
+          const cssHref = document.querySelector('link[rel="stylesheet"][href]')?.getAttribute('href') || '';
+          const fallbackBuildId = moduleSrc || cssHref ? `${moduleSrc}|${cssHref}` : `${Date.now()}`;
+          const placeholderToken = '__BUILD' + '_ID__';
+          const hasInjectedBuildId = injectedBuildId !== placeholderToken;
+          const buildId = hasInjectedBuildId ? injectedBuildId : fallbackBuildId;
+          let hasRefreshed = false;
+
+          navigator.serviceWorker.addEventListener('controllerchange', () => {
+            if (hasRefreshed) {
+              return;
+            }
+            hasRefreshed = true;
+            window.location.reload();
+          });
+
           navigator.serviceWorker
-            .register('./webgal-serviceworker.js')
+            .register(`./webgal-serviceworker.js?v=${encodeURIComponent(buildId)}`, {
+              updateViaCache: 'none',
+            })
             .then((reg) => {
+              reg.update();
               console.log('Registration succeeded. Scope is ' + reg.scope);
             })
             .catch((error) => {

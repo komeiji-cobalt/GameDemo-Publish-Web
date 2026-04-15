@@ -1,4 +1,11 @@
-const CACHE_NAME = 'webgal-assets-v2';
+const swVersion = new URL(self.location.href).searchParams.get('v') || 'dev';
+const CACHE_NAME = `webgal-assets-${swVersion}`;
+
+self.addEventListener('message', (event) => {
+  if (event.data?.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
+});
 
 self.addEventListener('install', (event) => {
   // console.log('[service worker] installing');
