@@ -175,7 +175,7 @@ changeBg:mediation_room.png;
 changeFigure:arbitrator.png -transform={"position":{"x":-520,"y":659},"scale":{"x":2,"y":1.967},"rotation":0,"colorRed":250,"colorGreen":250,"colorBlue":250};
 :一个月后，劳动仲裁委员会调解室。;
 仲裁员:经调解，双方达成协议。;
-仲裁员:一、黄某一次性支付陈小明工资、加班费、赔偿金等共计128000元。;
+仲裁员:一、黄某一次性支付陈小明工资、加班费、赔偿金等共计十一万三千二百零八元。;
 仲裁员:二、黄某自协议签订之日起三日内为陈小明补缴社会保险。;
 changeFigure:huang_boss_smile.png;
 黄老板:小明，我服了。劳动法，真不能小看。;
